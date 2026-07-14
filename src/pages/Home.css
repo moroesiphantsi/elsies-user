@@ -14,6 +14,7 @@
   min-height:100vh;
   position:relative;
 
+
   background:
   linear-gradient(
     135deg,
@@ -1831,4 +1832,1222 @@ flex-direction:column;
 }
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.home {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef4ff, #f8fafc, #fff8e7, #eef4ff);
+  background-size: 400% 400%;
+  animation: aurora 18s ease infinite;
+  overflow: hidden;
+  color: #1e293b;
+}
+
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   1. ANNOUNCEMENT BAR (New Feature)
+
+   ========================================================================== */
+.announcement-bar {
+  background: #111827;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+.announcement-tag {
+  background: #d4af37;
+  color: #111;
+  font-weight: 800;
+  padding: 4px 10px;
+  font-size: 11px;
+
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  min-height: 95vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #020617, #111827, #1f2937, #111827);
+  background-size: 300%;
+  animation: heroGradient 12s infinite linear;
+}
+
+.hero::before {
+
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #d4af37;
+  opacity: .18;
+  border-radius: 50%;
+  filter: blur(140px);
+  top: -200px;
+  left: -150px;
+  animation: floatGlow 10s infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #2563eb;
+  opacity: .15;
+  border-radius: 50%;
+  filter: blur(150px);
+  bottom: -250px;
+  right: -150px;
+
+  animation: floatGlow2 12s infinite alternate;
+}
+
+@keyframes heroGradient {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+@keyframes floatGlow {
+  from { transform: translate(0,0); }
+  to { transform: translate(120px, 80px); }
+}
+
+@keyframes floatGlow2 {
+  from { transform: translate(0,0); }
+  to { transform: translate(-120px, -100px); }
+}
+
+.hero-overlay {
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-content {
+
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  color: white;
+  animation: heroEnter 1.5s ease;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes heroEnter {
+  0% { opacity: 0; transform: translateY(80px) scale(.95); }
+  100% { opacity: 1; transform: none; }
+}
+
+.badge {
+  display: inline-block;
+  background: #d4af37;
+  color: #111;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+
+}
+
+.hero h1 {
+  font-size: 85px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+
+.hero h1 span {
+  display: block;
+  color: #FFD54F;
+  animation: goldPulse 4s infinite;
+}
+
+@keyframes goldPulse {
+  50% { text-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+}
+
+.hero p {
+  margin-top: 25px;
+  font-size: 22px;
+  max-width: 650px;
+
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 18px 40px;
+  border-radius: 60px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+
+.primary-btn {
+  background: linear-gradient(135deg, #FFD54F, #d4af37);
+  color: #111827;
+}
+
+.primary-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.4);
+}
+
+.secondary-btn {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #d4af37;
+}
+
+
+/* ==========================================================================
+   2. INTERACTIVE CUSTOMIZER (New Feature)
+   ========================================================================== */
+.customizer-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  color: #d4af37;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+
+.customizer-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  background: #f8fafc;
+  padding: 50px;
+  border-radius: 40px;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.05);
+}
+
+.customizer-preview {
+  background: #edf2f7;
+  border-radius: 30px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 10px 30px rgba(0,0,0,0.05);
+}
+
+
+.garment-view {
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Simulated 3D Garments with Clean CSS Draw Shapes */
+.garment-view.tshirt {
+  background-color: #111827;
+  border-radius: 12px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 15%, 85% 35%, 75% 25%, 75% 100%, 25% 100%, 25% 25%, 15% 35%, 0% 15%);
+}
+
+.garment-view.hoodie {
+  background-color: #334155;
+
+  border-radius: 16px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 25%, 80% 30%, 80% 100%, 20% 100%, 20% 30%, 0% 25%);
+}
+
+.garment-view.cap {
+  background-color: #d4af37;
+  border-radius: 50% 50% 10% 10%;
+  clip-path: ellipse(50% 40% at 50% 40%);
+}
+
+.mockup-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.mockup-logo.embroidery {
+
+  font-family: monospace;
+  letter-spacing: 1px;
+  border: 1px dashed rgba(255,255,255,0.4);
+  padding: 5px;
+}
+
+.mockup-logo.printing {
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.3));
+}
+
+.preview-indicator {
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.customizer-controls h3 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+
+.control-group {
+  margin-bottom: 30px;
+}
+
+.control-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.control-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.control-grid button {
+  flex: 1;
+  padding: 12px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: all 0.3s;
+}
+
+.control-grid button.active, .control-grid button:hover {
+  background: #111827;
+  color: white;
+  border-color: #111827;
+}
+
+.pricing-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  border-left: 5px solid #d4af37;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.price-title {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.price-value {
+
+  font-size: 32px;
+  font-weight: 900;
+  color: #111827;
+  margin: 10px 0;
+}
+
+.fluid-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* ==========================================================================
+   3. MATERIAL TABS SECTION (New Feature)
+   ========================================================================== */
+.material-tabs-section {
+  padding: 100px 8%;
+  background: #f8fafc;
+}
+
+.tabs-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tabs-header button {
+  padding: 15px 30px;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tabs-header button.active, .tabs-header 
+
+button:hover {
+  background: #d4af37;
+  color: #111827;
+}
+
+.tabs-content {
+  background: white;
+  padding: 45px;
+  border-radius: 35px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.tab-panel h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.tab-panel ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.tab-panel li {
+
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SERVICES
+   ========================================================================== */
+.services {
+  padding: 100px 8%;
+  background: white;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.section-text {
+  max-width: 800px;
+
+  margin: 20px auto;
+  font-size: 20px;
+  color: #64748b;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 60px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(25px);
+  padding: 40px;
+  border-radius: 35px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.1);
+  transition: .6s;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.service-card:hover {
+  background: #111827;
+  color: white;
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 40px 90px rgba(0,0,0,.25);
+}
+
+.service-card svg {
+  font-size: 60px;
+  color: #d4af37;
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.service-card:hover p {
+
+  color: #cbd5e1;
+}
+
+.service-card .arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  color: #d4af37;
+  font-size: 25px;
+}
+
+/* ==========================================================================
+   4. BULK SLIDER CALCULATOR (New Feature)
+   ========================================================================== */
+.calculator-slider-section {
+  padding: 100px 8%;
+  background: white;
+}
+
+.slider-card-wrapper {
+
+  max-width: 1100px;
+  margin: auto;
+  background: #111827;
+  color: white;
+  padding: 50px;
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.slider-details h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.slider-container {
+  margin-top: 35px;
+}
+
+.custom-range-slider {
+  width: 100%;
+  accent-color: #d4af37;
+
+  height: 8px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+  outline: none;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.slider-labels strong {
+  color: #FFD54F;
+}
+
+.slider-stats-display {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 30px;
+
+  text-align: center;
+}
+
+.slider-stats-display h2 {
+  color: #FFD54F;
+  font-size: 42px;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   5. BENTO LOOKBOOK (New Feature)
+   ========================================================================== */
+.lookbook-section {
+  padding: 100px 8%;
+  background: #f8fafc;
+}
+
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.lookbook-item {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  position: relative;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.lookbook-item.item-large {
+  grid-column: span 2;
+}
+
+.lookbook-img {
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+/* Embedded CSS Visual Art representations replacing raw images */
+.stitch-macro {
+  background-image: linear-gradient(45deg, #1e293b 25%, #d4af37 100%);
+}
+.dtf-macro {
+  background-image: linear-gradient(135deg, #2563eb 0%, #ff007f 100%);
+}
+.uniform-macro {
+  background-image: linear-gradient(180deg, #111827 0%, #334155 100%);
+}
+
+.lookbook-item:hover .lookbook-img {
+  transform: scale(1.08);
+}
+
+.lookbook-info {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.lookbook-info span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(212, 175, 55, 0.8);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.lookbook-info h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+/* ==========================================================================
+   WHY CHOOSE US
+   ========================================================================== */
+.why {
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #020617, #111827);
+  color: white;
+  display: flex;
+  gap: 60px;
+}
+
+.why-content {
+  flex: 1;
+}
+
+.why h2 {
+  font-size: 55px;
+}
+
+.why ul {
+  padding: 0;
+}
+
+.why li {
+  list-style: none;
+  font-size: 20px;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+.why li svg {
+  color: #d4af37;
+  margin-right: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+}
+
+.stats div {
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(25px);
+  border-radius: 30px;
+  padding: 35px;
+  transition: .5s;
+  text-align: center;
+}
+
+.stats div:hover {
+  transform: translateY(-15px) scale(1.05);
+}
+
+.stats h1 {
+  color: #FFD54F;
+  font-size: 42px;
+}
+
+/* ==========================================================================
+   PROCESS
+   ========================================================================== */
+.process {
+
+  padding: 100px 8%;
+  background: #fff;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 50px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.process-grid div {
+  padding: 40px;
+  border-radius: 30px;
+  background: #f8fafc;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.process-grid span {
+
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  background: #d4af37;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   6. LIVE simulated ORDER TRACKER (New Feature)
+   ========================================================================== */
+.tracker-section {
+  padding: 100px 8%;
+  background: #f8fafc;
+
+}
+
+.tracker-card {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 50px;
+  border-radius: 35px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.tracker-form {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.tracker-input {
+  flex: 1;
+  padding: 18px 25px;
+  border-radius: 50px;
+  border: 2px solid #e2e8f0;
+  outline: none;
+
+  font-size: 16px;
+}
+
+.tracker-btn {
+  padding: 18px 35px;
+  border-radius: 50px;
+  background: #111827;
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tracker-btn:hover {
+  background: #d4af37;
+  color: #111827;
+}
+
+.tracker-result-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #eef4ff;
+  border-radius: 15px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pulse-indicator {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: trackingPulse 1.5s infinite;
+}
+
+@keyframes trackingPulse {
+  0% { transform: scale(0.9); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+/* ==========================================================================
+   7. DYNAMIC ACCORDION FAQ (New Feature)
+   
+
+========================================================================== */
+.faq-section {
+  padding: 100px 8%;
+  background: white;
+}
+
+.faq-wrapper {
+  max-width: 850px;
+  margin: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 25px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 20px;
+  color: #111827;
+}
+
+.faq-toggle-icon::before {
+  content: "+";
+  font-size: 24px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.faq-item.active .faq-toggle-icon::before {
+  content: "−";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s;
+}
+
+.faq-item.active .faq-answer {
+
+  max-height: 200px;
+  margin-top: 15px;
+}
+
+.faq-answer p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   8. CLIENT TESTIMONIALS (New Feature)
+   ========================================================================== */
+.testimonials-section {
+  padding: 100px 8%;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 42px;
+
+  margin-bottom: 50px;
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+  max-width: 450px;
+  text-align: left;
+}
+
+.stars-wrapper {
+  color: #FFD54F;
+  margin-bottom: 20px;
+}
+
+.testimonial-card p {
+
+  font-style: italic;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   TRUST
+   ========================================================================== */
+.trust {
+  padding: 100px 8%;
+  text-align: center;
+  background: white;
+}
+
+.trust svg {
+  font-size: 70px;
+  color: #d4af37;
+  margin-bottom: 25px;
+}
+
+
+.trust h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.trust p {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   CTA
+   ========================================================================== */
+.cta {
+  padding: 120px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #FFD54F, 
+
+#d4af37);
+}
+
+.cta h2 {
+  font-size: 60px;
+  animation: pulseText 3s infinite;
+}
+
+@keyframes pulseText {
+  50% { transform: scale(1.02); }
+}
+
+.cta a {
+  padding: 18px 40px;
+  background: #111827;
+  color: white;
+  border-radius: 50px;
+  display: inline-block;
+  transition: .5s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta a:hover {
+
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 25px 50px rgba(0,0,0,.3);
+}
+
+/* ==========================================================================
+   9. FLOATING ACTION DOCK (Replaced single WhatsApp button)
+   ========================================================================== */
+.floating-dock {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.dock-item {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-dock {
+  background: #25d366;
+}
+
+.calc-dock {
+  background: #d4af37;
+}
+
+
+.dock-item:hover {
+  transform: scale(1.15) translateY(-4px);
+}
+
+/* TOP SCROLL BUTTON */
+.top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: #111827;
+  color: white;
+  font-size: 25px;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  background: #d4af37;
+
+  color: #111827;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media(max-width: 1024px) {
+  .hero h1 { font-size: 60px; }
+  .customizer-container { grid-template-columns: 1fr; }
+  .slider-card-wrapper { grid-template-columns: 1fr; }
+  .lookbook-grid { grid-template-columns: 1fr; }
+  .lookbook-item.item-large { grid-column: span 1; }
+  .service-grid { grid-template-columns: 1fr; }
+  .testimonials-container { flex-direction: column; align-items: center; }
+}
+
+@media(max-width: 768px) {
+  .hero h1 { font-size: 45px; }
+  .why { flex-direction: column; }
+  .stats { flex-direction: column; }
+  .process-grid { grid-template-columns: 1fr; }
+  .tracker-form { flex-direction: column; }
 }
