@@ -388,7 +388,7 @@ function Home() {
               onChange={(e) => setOrderId(e.target.value)}
               className="tracker-input"
             />
-            <button type="submit" className="tracker-btn">Check Status</button>
+            <button type="submit" href= "/profile-login" className="tracker-btn">Check Status</button>
           </form>
 
           {orderStatus && (

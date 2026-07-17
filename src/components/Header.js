@@ -149,7 +149,7 @@ Live Chat
           </Link>
 
 
-          <Link to="/user-login">
+          <Link to="/services">
             Place Your Order
           </Link>
 
