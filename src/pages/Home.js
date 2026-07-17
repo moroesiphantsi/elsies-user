@@ -16,6 +16,7 @@ import {
   FaUsers,
   FaChevronUp,
   FaStar,
+  FaFacebook,
   FaSlidersH,
   FaTruck,
   FaEye
@@ -68,8 +69,8 @@ function Home() {
     <div className="home">
       {/* 1. ANNOUNCEMENT BAR (New Feature) */}
       <div className="announcement-bar">
-        <span className="announcement-tag">NEW IN 2026</span>
-        <p>Now offering metallic gold thread embroidery & multi-dimensional DTF printing.</p>
+        <span className="announcement-tag">Create.Print.Embroider.Impress</span>
+        <p>Bringing Your Ideas To Life With Premium Printing & Embroidery.</p>
       </div>
 
       {/* HERO SECTION */}
@@ -320,39 +321,6 @@ function Home() {
         </div>
       </section>
 
-      {/* 5. VISUAL LOOKBOOK GRID (New Feature) */}
-      <section className="lookbook-section">
-        <div className="section-header">
-          <h2>The 2026 Texture Lookbook</h2>
-          <p className="section-text">Explore detailed macros highlighting the exquisite stitch density of our finished pieces.</p>
-        </div>
-        <div className="lookbook-grid">
-
-          <div className="lookbook-item item-large">
-            <div className="lookbook-img stitch-macro"></div>
-            <div className="lookbook-info">
-              <span>Embroidery</span>
-              <h3>Satin Stitch Close-Up</h3>
-            </div>
-          </div>
-          <div className="lookbook-item">
-            <div className="lookbook-img dtf-macro"></div>
-            <div className="lookbook-info">
-              <span>Direct-to-Film</span>
-              <h3>Vibrant Gradient Transfers</h3>
-            </div>
-          </div>
-          <div className="lookbook-item">
-            <div className="lookbook-img uniform-macro"></div>
-            <div className="lookbook-info">
-              <span>Corporate</span>
-              <h3>Precision Uniform Lines</h3>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* WHY CHOOSE US */}
       <section className="why">
         <div className="why-content">
@@ -510,6 +478,9 @@ function Home() {
       <div className="floating-dock">
         <a href="https://wa.me/27827187044" className="dock-item whatsapp-dock" title="WhatsApp Chat">
           <FaWhatsapp />
+        </a>
+        <a href="https://www.facebook.com/share/18dwypXPWz/" className="dock-item facebook-dock" title="Facebook Chat">
+          <FaFacebook />
         </a>
         <a href="/print-calculator" className="dock-item calc-dock" title="Dynamic Calculator">
           <FaSlidersH />

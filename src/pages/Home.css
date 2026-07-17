@@ -2999,6 +2999,10 @@ button:hover {
   background: #25d366;
 }
 
+.facebook-dock {
+  background: hsl(241, 91%, 46%);
+}
+
 .calc-dock {
   background: #d4af37;
 }

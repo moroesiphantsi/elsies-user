@@ -58,15 +58,15 @@ function Header() {
   <FaUserShield />
 
   <Link
-    to="/profile-login"
+    to="/live-chat"
     className="admin-link"
   >
-    Profile
+    
   </Link>
-
+Live Chat
 </div>
 
-  
+
 
 </div>
 
@@ -159,8 +159,8 @@ function Header() {
           </Link>
 
 
-          <Link to="/live-chat">
-            Live Chat
+          <Link to="/profile-login">
+        Check Your Order
           </Link>
 
 
